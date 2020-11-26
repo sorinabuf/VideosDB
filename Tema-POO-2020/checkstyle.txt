@@ -1,2 +1,4 @@
 Starting audit...
+[ERROR] C:\Users\sorin\Desktop\tema poo\VideosDB\Tema-POO-2020\.\src\user\User.java:39:30: Parameter nrRatings should be final. [FinalParameters]
 Audit done.
+Checkstyle ends with 1 errors.

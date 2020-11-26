@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="libs/jackson-annotations-2.9.3.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-core-2.9.3.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-databind-2.9.9.3.jar"/>
+	<classpathentry kind="lib" path="libs/json-20140107.jar"/>
+	<classpathentry kind="lib" path="libs/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="libs/org.json.simple-0.3-incubating.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
