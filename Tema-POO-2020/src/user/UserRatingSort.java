@@ -18,3 +18,4 @@ public final class UserRatingSort implements Comparator<User> {
         return result;
     }
 }
+

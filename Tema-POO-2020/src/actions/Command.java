@@ -40,7 +40,7 @@ public class Command {
                 if (user.getHistory().get(action.getTitle()) == null) {
                     message = "error -> " + action.getTitle() + " is not seen";
                 } else if (user.getFavoriteVideos().contains(action.getTitle())) {
-                    message = "error -> " + action.getTitle() + " is already in favourite List";
+                    message = "error -> " + action.getTitle() + " is already in favourite list";
                 } else {
                     user.getFavoriteVideos().add(action.getTitle());
                     message = "success -> " + action.getTitle() + " was added as favourite";

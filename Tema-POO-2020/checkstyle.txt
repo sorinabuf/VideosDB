@@ -1,7 +1,7 @@
 Starting audit...
-[ERROR] C:\Users\sorin\Desktop\tema poo\VideosDB\Tema-POO-2020\.\src\main\Main.java:80: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\sorin\Desktop\tema poo\VideosDB\Tema-POO-2020\.\src\main\Main.java:85: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\sorin\Desktop\tema poo\VideosDB\Tema-POO-2020\.\src\main\Main.java:94: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\sorin\Desktop\tema poo\VideosDB\Tema-POO-2020\.\src\actions\Recommendation.java:38: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\sorin\Desktop\tema poo\VideosDB\Tema-POO-2020\.\src\actions\Recommendation.java:62: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\sorin\Desktop\tema poo\VideosDB\Tema-POO-2020\.\src\actions\Recommendation.java:222: Line has trailing spaces. [RegexpSingleline]
 [ERROR] C:\Users\sorin\Desktop\tema poo\VideosDB\Tema-POO-2020\.\src\user\User.java:39:30: Parameter nrRatings should be final. [FinalParameters]
 Audit done.
 Checkstyle ends with 4 errors.
