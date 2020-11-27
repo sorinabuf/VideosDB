@@ -13,6 +13,7 @@ import setinputdata.SetInputData;
 import org.json.simple.JSONArray;
 
 import actions.Command;
+import actions.Query;
 import actor.ActorsDatabase;
 
 import java.io.File;
@@ -99,6 +100,11 @@ public final class Main {
             if (action.getActionType().equals("command")) {
                 Command command = new Command(action);
                 String message = command.executeCommand(usersDatabase, videosDatabase);
+                arrayResult.add(fileWriter.writeFile(action.getActionId(), "", message));
+            } else if (action.getActionType().equals("query")) {
+                Query query = new Query(action);
+                String message = query.executeQuery(usersDatabase, actorsDatabase,
+                        videosDatabase);
                 arrayResult.add(fileWriter.writeFile(action.getActionId(), "", message));
             }
         }
