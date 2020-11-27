@@ -65,12 +65,11 @@ public final class Main {
     public static void action(final String filePath1,
                               final String filePath2) throws IOException {
         InputLoader inputLoader = new InputLoader(filePath1);
+        @SuppressWarnings("unused")
         Input input = inputLoader.readData();
 
         Writer fileWriter = new Writer(filePath2);
         JSONArray arrayResult = new JSONArray();
-
-        //TODO add here the entry point to your implementation
 
         fileWriter.closeJSON(arrayResult);
     }

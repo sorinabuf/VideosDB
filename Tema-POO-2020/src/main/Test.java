@@ -28,6 +28,7 @@ public final class Test {
         if (inputDir != null) {
             Arrays.sort(inputDir);
 
+            @SuppressWarnings("resource")
             Scanner scanner = new Scanner(System.in);
             String fileName = scanner.next();
             for (File file : inputDir) {
