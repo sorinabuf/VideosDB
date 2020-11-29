@@ -34,8 +34,8 @@ public final class Recommendation {
      * possible messages to be displayed: when the user has not seen a video and
      * when the user has seen all the videos from the database. If there is a video
      * that has not been viewed, the first unseen video from the videosdatabase will
-     * pe returned.
-     * 
+     * be returned.
+     *
      * @param videosDatabase the database of all videos
      * @param userAction     the user for whom the action is performed
      * @return a message accordingly
@@ -54,12 +54,12 @@ public final class Recommendation {
     }
 
     /**
-     * Returns a message based on the standard recommendation action. There are two
-     * possible messages to be displayed: when the user has not seen a video and
+     * Returns a message based on the best unseen recommendation action. There are
+     * two possible messages to be displayed: when the user has not seen a video and
      * when the user has seen all the videos from the database. The video with the
      * biggest rating unseen by the user will be displayed. If there does not exist
      * this type of video, first unseen video with rating 0 will be returned.
-     * 
+     *
      * @param videosDatabase the database of all videos
      * @param userAction     the user for whom the action is performed
      * @return a message accordingly
@@ -102,10 +102,8 @@ public final class Recommendation {
     /**
      * Returns a message based on the search recommendation action. There are two
      * possible messages to be displayed: when the user has not seen a video and
-     * when the user has seen all the videos from the database. The unseen videos
-     * from the most popular genre will be displayed. If all the videos from the
-     * respective genre have been seen then it continues with the next most popular
-     * genre.
+     * when the user has seen all the videos from the genre given at input. The
+     * videos with the respective genre will be displayed.
      *
      * @param videosDatabase the database of all videos
      * @param userAction     the user for whom the action is performed
@@ -178,6 +176,19 @@ public final class Recommendation {
         return message;
     }
 
+    /**
+     * Returns a message based on the popular recommendation action. There are two
+     * possible messages to be displayed: when the user has not seen a video and
+     * when the user has seen all the videos from the database. The first unseen
+     * video from the most popular genre will be displayed. If all the videos from
+     * the respective genre have been seen then it continues with the next most
+     * popular genre.
+     *
+     * @param videosDatabase the database of all videos
+     * @param userAction     the user for whom the action is performed
+     * @param usersDatabase  the database of all users
+     * @return a message accordingly
+     */
     private String executeRecommendationPopular(final VideosDatabase videosDatabase,
             final User userAction, final UsersDatabase usersDatabase) {
         String message = new String();
@@ -197,6 +208,7 @@ public final class Recommendation {
             }
         }
         VideosNumericalSort sortmethod = new VideosNumericalSort();
+
         List<Map.Entry<String, Integer>> sortedvideos = new ArrayList<Map.Entry<String, Integer>>();
 
         for (Map.Entry<String, Integer> video : populargenres.entrySet()) {
@@ -219,7 +231,7 @@ public final class Recommendation {
     /**
      * Returns the video with the biggest number of occurrences in favorite videos
      * lists.
-     * 
+     *
      * @param videosDatabase the database of all videos
      * @param userAction     the user for whom the action is performed
      * @param usersDatabase  the database of all users
