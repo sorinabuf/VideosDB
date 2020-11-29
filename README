@@ -1,0 +1,106 @@
+********************************************************************************
+
+                            TEMA POO - VIDEOSDB
+
+                            BUF SORINA ANAMARIA
+
+********************************************************************************
+
+	Tema a constat in implementarea unei platforme de filme si seriale in care 
+utilizatorii pot simula operatiile specifice unei astfel de interfete.
+
+	Tema este organizata in urmatoarele pachete:
+
+	• actions - contine principalele clase ale programului responsabile cu exe-
+				cutarea efectiva a comenzilor care sunt apoi create in main,
+				folosindu-se de campurile si metodele database-urilor.
+
+		clase: - Command: executa actiuni de tip command;
+
+			   - Query: executa actiuni de tip query;
+
+			   - Recommendation: executa actiuni de tip recommendation.
+
+	• actor - contine toate clasele specifice entitatii actor.
+
+		clase: - Actor: contine campurile specifice unui actor;
+
+			   - ActorsAwards: clasa enum care contine tipuri generale de premii;
+
+			   - ActorsAwardsSort: comparator utilizat in sortarea unei liste de
+			   					   actori dupa un numar de premii si nume;
+
+			   - ActorsFiletersSort: comparator utilizat in sortarea unei liste
+			   					     de actori dupa nume;
+
+			   - ActorsRatingsSort: comparator utilizat in sortarea unei liste de
+			   						actori dupa rating-ul filmelor in care au apa-
+			   						rut si dupa nume;
+
+			   - ActorsDatabase: principala clasa a pachetului care contine cam-
+			   					 puri de actori destinate sortarii, create prin 
+			   					 intermediul metodelor implementate, care utili-
+			   					 zeaza clasele comparator anterior mentionate.
+
+	• checker;
+
+	• common;
+
+	• entertainment - contine toate clasele specifice entitatii video.
+
+		clase: - Genre: clasa enum care contine tipuri de videouri;
+
+			   - Movie: mosteneste clasa Video, avand campuri specifice;
+
+			   - Season: specifica unui serial;
+
+			   - Show: mosteneste clasa Video, avand campuri specifice;
+
+			   - Video: principala entitate, mostenita de Movie si Show, care 
+			   			cuprinde campurile comune acestora;
+
+			   - VideosBestUnseenSort: comparator utilizat in sortarea filmelor
+			   						   pe baza rating-ului si a ordinii de aparitie
+			   						   in baza de date;
+
+			   - VideosNumericalSort: comparator utilizat in sortarea filmelor
+			   						  pe baza unor caracteristici numerice intregi;
+
+			   - VideosRatingsSort: comparator utilizat in sortarea videourilor
+			   					    pe baza rating-urilor obtinute;
+
+			   - VideosDatabase: principala clasa a pachetului care contine toate
+			   				     campurile de videouri destinate sortarii pe baza
+			   				     criteriilor mentionate in input, continand metode
+			   				     specifice pentru popularea acestor campuri care
+			   				     apeleaza comparatorii mentionati anterior, efec-
+			   				     tuand parcurgeri si sortari ale database-ului.
+
+	• fileio;
+
+	• main - in cadrul acestui pachet, clasa main apeleaza tipuri de actiuni
+			 corespunzatoare input-ului primit, returnand mesaje specifice.
+
+	• setinputdata - in cadrul acestui pachet, clasa SetInputData populeaza 
+					 database-urile de actori, videouri si utilizatori pe baza
+					 input-ului primit prin intermediul claselor create in
+					 pachetul checker.
+
+	• user - contine toate clasele specifice entitatii utilizator.
+
+		clase: - User: contine campurile specifice unui user;
+
+			   - UserRatingSort: comparator care sorteaza lista de utilizatori
+			   					 dupa numarul de rating-uri acordate filmelor
+			   					 si serialelor si dupa nume;
+
+			   - UsersDatabase: principala clasa a pachetului care contine lista
+			   					de utilizatori destinata sortarii conform com-
+			   					paratorului mentionat anterior.
+
+    • utils.
+
+    Pentru mai multe detalii legate de implementarea efectiva a metodelor si de
+reprezentarea campurilor am adugat comentarii semnificative in cod.
+
+GitHub Repository: https://github.com/sorinabuf/VideosDB.git
